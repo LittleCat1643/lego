@@ -1,0 +1,100 @@
+:root {
+    --white: #ffffff;
+    --pink: #fc217d;
+    --yellow: #ffc107;
+    --orange: #fdb005;
+    --cyan: #23c7fb;
+    --blue: #5060f8;
+    --transparent-black: #00000088;
+    --black: #000000;
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(45deg, var(--cyan), var(--blue));
+    height: 100vh;
+}
+
+button > b {
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black), 0px 3px 0 var(--black), 1px 3px 0 var(--black), -1px 3px 0 var(--black);
+    font-weight: 700;
+}
+
+button > img {
+    filter: drop-shadow(-1px -1px 0 var(--black)) drop-shadow(1px -1px 0 var(--black)) drop-shadow(-1px 1px 0 var(--black)) drop-shadow(1px 1px 0 var(--black));
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.wrap > div {
+    display: none;
+    max-width: 600px;
+    height: 100%;
+}
+
+.wrap > div > .header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.wrap > div > .header > .back {
+    margin-right: 26px;
+}
+
+.wrap > div > .header > .back > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: solid 3px var(--black);
+    outline: solid 3px var(--white);
+    background: var(--orange);
+    border-radius: 8px;
+    transition: 0.1s;
+    transform: skew(-5deg);
+    padding: 12px;
+}
+
+.wrap > div > .header > .back > button:active {
+    transform: skew(-5deg) scale(0.9);
+}
+
+.wrap > div > .header > .back > button > img {
+    width: 36px;
+}
+
+.wrap > div > .header > .title > h1 {
+    color: var(--white);
+    text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black), 0px 3px 0 var(--black), 1px 3px 0 var(--black), -1px 3px 0 var(--black);
+    font-weight: 700;
+    font-size: 36px;
+}

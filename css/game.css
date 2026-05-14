@@ -1,0 +1,111 @@
+.game {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.game > div {
+    width: 100%;
+}
+
+.game > .header {
+    position: absolute;
+    top: 0;
+}
+
+.game > .canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: var(--canvas-height);
+}
+
+.game > .canvas > .tower {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: relative;
+    padding: var(--tower-padding);
+    padding-top: var(--tower-padding-top);
+    margin: var(--tower-margin);
+    width: var(--tower-width);
+    height: var(--tower-height);
+    border-radius: var(--tower-border-radius);
+    background: var(--black);
+}
+
+.game > .canvas > .selected {
+    top: -12px;
+    animation: selectedError 0.2s ease;
+}
+
+.game > .canvas > .error {
+    animation: towerError 0.2s ease;
+}
+
+@keyframes selectedError {
+    0% { top: 0px; }
+    100% { top: -12px; }
+}
+
+@keyframes towerError {
+    0% { left: 0px; }
+    25% { left: 4px; }
+    50% { left: -4px; }
+    75% { left: 4px; }
+    100% { left: 0px; }
+}
+
+.game > .canvas > .tower > .brick:nth-child(10) {
+    z-index: 1;
+}
+
+.game > .canvas > .tower > .brick:nth-child(9) {
+    z-index: 2;
+}
+
+.game > .canvas > .tower > .brick:nth-child(8) {
+    z-index: 3;
+}
+
+.game > .canvas > .tower > .brick:nth-child(7) {
+    z-index: 4;
+}
+
+.game > .canvas > .tower > .brick:nth-child(6) {
+    z-index: 5;
+}
+
+.game > .canvas > .tower > .brick:nth-child(5) {
+    z-index: 6;
+}
+
+.game > .canvas > .tower > .brick:nth-child(4) {
+    z-index: 7;
+}
+
+.game > .canvas > .tower > .brick:nth-child(3) {
+    z-index: 8;
+}
+
+.game > .canvas > .tower > .brick:nth-child(2) {
+    z-index: 9;
+}
+
+.game > .canvas > .tower > .brick:nth-child(1) {
+    z-index: 10;
+}
+
+.game > .canvas > .tower > .brick {
+    position: relative;
+    width: var(--brick-width);
+    height: var(--brick-height);
+    margin-top: var(--brick-margin-top);
+}
+
+.game > .canvas > .tower > .brick > .image {
+    width: var(--image-width);
+    height: var(--image-height);
+}

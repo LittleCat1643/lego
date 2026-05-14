@@ -1,0 +1,136 @@
+.sections {
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.sections > .layout {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: calc(100vh - 170px);
+    padding: 32px 16px;
+}
+
+.sections > .layout > .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.4) transparent;
+    background: var(--transparent-black);
+    transition: 0.3s;
+    width: 100%;
+    padding-right: 16px;
+    border-radius: 16px;
+    height: 46px;
+    margin-bottom: 32px;
+}
+
+.sections > .layout::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.sections > .layout::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 0;
+}
+
+.sections > .layout::-webkit-scrollbar-thumb {
+    background-color: var(--transparent-black);
+    border-radius: 10px;
+}
+
+.sections > .layout::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.sections > .layout > .section:active {
+    transform: scale(0.95);
+}
+
+.sections > .layout > .section > .number {
+    position: relative;
+    top: -6px;
+    text-align: center;
+    background-size: cover;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 16px;
+    width: 64px;
+}
+
+.sections > .layout > .section:nth-child(1) > .number {
+    background: url('../assets/bricks/red.png');
+}
+
+.sections > .layout > .section:nth-child(2) > .number {
+    background: url('../assets/bricks/green.png');
+}
+
+.sections > .layout > .section:nth-child(3) > .number {
+    background: url('../assets/bricks/blue.png');
+}
+
+.sections > .layout > .section:nth-child(4) > .number {
+    background: url('../assets/bricks/yellow.png');
+}
+
+.sections > .layout > .section:nth-child(5) > .number {
+    background: url('../assets/bricks/white.png');
+}
+
+.sections > .layout > .section:nth-child(6) > .number {
+    background: url('../assets/bricks/brown.png');
+}
+
+.sections > .layout > .section:nth-child(7) > .number {
+    background: url('../assets/bricks/gray.png');
+}
+
+.sections > .layout > .section:nth-child(8) > .number {
+    background: url('../assets/bricks/pink.png');
+}
+
+.sections > .layout > .section:nth-child(9) > .number {
+    background: url('../assets/bricks/cyan.png');
+}
+
+.sections > .layout > .section:nth-child(10) > .number {
+    background: url('../assets/bricks/salad.png');
+}
+
+.sections > .layout > .section > .number > span {
+    position: relative;
+    color: var(--white);
+    text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black), 0px 3px 0 var(--black), 1px 3px 0 var(--black), -1px 3px 0 var(--black);
+    top: 4px;
+}
+
+.sections > .layout > .section > .percent > span {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sections > .layout > .section > .stars {
+    display: flex;
+    align-items: center;
+}
+
+.sections > .layout > .section > .stars > img {
+    width: 18px;
+    margin-right: 6px;
+}
+
+.sections > .layout > .section > .stars > span {
+    color: var(--yellow);
+    font-weight: 500;
+}

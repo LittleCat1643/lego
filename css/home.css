@@ -1,0 +1,71 @@
+.home {
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.home > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home > .header > .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 44px;
+}
+
+.home > .header > .logo > img {
+    width: 256px;
+    filter: drop-shadow(-2px -2px 0 var(--white)) drop-shadow(2px -2px 0 var(--white)) drop-shadow(-2px 2px 0 var(--white)) drop-shadow(2px 2px 0 var(--white));
+    animation: logoAnimation 1s ease infinite;
+}
+
+@keyframes logoAnimation {
+    0% { transform: scale(1.05); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1.05); }
+}
+
+.home > .layout > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.home > .layout > div > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: solid 3px var(--black);
+    outline: solid 3px var(--white);
+    border-radius: 8px;
+    transition: 0.1s;
+    transform: skew(-5deg);
+    padding: 12px;
+    width: 256px;
+    font-size: 24px;
+}
+
+.home > .layout > div > button:active {
+    transform: skew(-5deg) scale(0.9);
+}
+
+.home > .layout > div > button > img {
+    width: 26px;
+    margin-right: 10px;
+}
+
+.home > .layout > .play > button {
+    background: var(--orange);
+}
+
+.home > .layout > .settings > button {
+    background: var(--pink);
+}

@@ -1,0 +1,102 @@
+.levels {
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.levels > .layout {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: calc(100vh - 170px);
+    width: 384px;
+    padding: 16px 0;
+}
+
+.levels > .layout > .level {
+    text-align: center;
+    background-size: cover;
+    transition: 0.3s;
+    margin: 8px 4px;
+    width: 64px;
+    height: 64px;
+}
+
+.levels > .layout > .level > .number {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.levels > .layout > .level > .number > span {
+    position: relative;
+    color: var(--white);
+    text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black), 0px 3px 0 var(--black), 1px 3px 0 var(--black), -1px 3px 0 var(--black);
+    top: 12px;
+}
+
+.levels > .layout > .level > .stars {
+    position: relative;
+    top: 12px;
+}
+
+.levels > .layout > .level > .stars > img {
+    width: 16px;
+}
+
+.levels > .layout > .level:active {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.levels > .layout > .closed:active {
+    cursor: default;
+    transform: none;
+}
+
+.levels > .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.levels > .footer > div {
+    margin: 0 16px;
+}
+
+.levels > .footer > div > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    transition: 0.1s;
+}
+
+.levels > .footer > div > button:active {
+    transform: scale(1.1);
+}
+
+.levels > .footer > div > button > img {
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black))
+            drop-shadow(0px 4px 0 var(--black));
+    width: 48px;
+}
+
+.levels > .footer > div > span {
+    color: var(--white);
+    text-shadow: -1px -1px 0 var(--black),
+                  1px -1px 0 var(--black),
+                  -1px 1px 0 var(--black),
+                  1px 1px 0 var(--black),
+                  0px 6px 0 var(--black);
+    font-weight: 600;
+    font-size: 40px;
+}
