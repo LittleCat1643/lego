@@ -23,12 +23,17 @@
     scrollbar-width: thin;
     scrollbar-color: rgba(0,0,0,0.4) transparent;
     background: var(--transparent-black);
+    outline: solid 2px var(--black);
     transition: 0.3s;
     width: 100%;
     padding-right: 16px;
-    border-radius: 16px;
+    border-radius: 4px;
     height: 46px;
     margin-bottom: 32px;
+}
+
+.sections > .layout > .closed {
+    cursor: default;
 }
 
 .sections > .layout::-webkit-scrollbar {
@@ -56,55 +61,37 @@
     transform: scale(0.95);
 }
 
+.sections > .layout > .closed:active {
+    transform: none;
+}
+
 .sections > .layout > .section > .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     top: -6px;
     text-align: center;
     background-size: cover;
-    font-size: 26px;
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black));
+    font-size: 28px;
     font-weight: 700;
     padding: 16px;
     width: 64px;
+    height: 64px;
 }
 
-.sections > .layout > .section:nth-child(1) > .number {
-    background: url('../assets/bricks/red.png');
-}
-
-.sections > .layout > .section:nth-child(2) > .number {
-    background: url('../assets/bricks/green.png');
-}
-
-.sections > .layout > .section:nth-child(3) > .number {
-    background: url('../assets/bricks/blue.png');
-}
-
-.sections > .layout > .section:nth-child(4) > .number {
-    background: url('../assets/bricks/yellow.png');
-}
-
-.sections > .layout > .section:nth-child(5) > .number {
-    background: url('../assets/bricks/white.png');
-}
-
-.sections > .layout > .section:nth-child(6) > .number {
-    background: url('../assets/bricks/brown.png');
-}
-
-.sections > .layout > .section:nth-child(7) > .number {
-    background: url('../assets/bricks/gray.png');
-}
-
-.sections > .layout > .section:nth-child(8) > .number {
-    background: url('../assets/bricks/pink.png');
-}
-
-.sections > .layout > .section:nth-child(9) > .number {
-    background: url('../assets/bricks/cyan.png');
-}
-
-.sections > .layout > .section:nth-child(10) > .number {
-    background: url('../assets/bricks/salad.png');
+.sections > .layout > .section > .number > img {
+    position: relative;
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black));
+    top: 4px;
+    width: 36px;
 }
 
 .sections > .layout > .section > .number > span {
@@ -132,5 +119,19 @@
 
 .sections > .layout > .section > .stars > span {
     color: var(--yellow);
+    font-size: 16px;
     font-weight: 500;
+}
+
+.sections > .layout > .closed > .percent {
+    text-align: center;
+    width: 100%;
+}
+
+.sections > .layout > .closed > .percent > span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.8;
 }

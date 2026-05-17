@@ -1,6 +1,6 @@
 .game {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -30,6 +30,7 @@
     padding: var(--tower-padding);
     padding-top: var(--tower-padding-top);
     margin: var(--tower-margin);
+    margin-bottom: var(--tower-margin-bottom);
     width: var(--tower-width);
     height: var(--tower-height);
     border-radius: var(--tower-border-radius);
@@ -37,17 +38,31 @@
 }
 
 .game > .canvas > .selected {
-    top: -12px;
-    animation: selectedError 0.2s ease;
+    top: var(--tower-select);
+    animation: selectedAnimation 0.2s ease;
+}
+
+.game > .canvas > .selected > .brick:nth-child(1) {
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black));
+    top: var(--brick-select);
+    animation: brickAnimation 0.2s ease;
 }
 
 .game > .canvas > .error {
     animation: towerError 0.2s ease;
 }
 
-@keyframes selectedError {
+@keyframes selectedAnimation {
     0% { top: 0px; }
-    100% { top: -12px; }
+    100% { top: var(--tower-select); }
+}
+
+@keyframes brickAnimation {
+    0% { top: 0px; }
+    100% { top: var(--brick-select); }
 }
 
 @keyframes towerError {

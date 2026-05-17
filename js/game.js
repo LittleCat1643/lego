@@ -38,13 +38,16 @@ function elementsSizes() {
     const brickWidth = 64 - 3 * levelField.length;
     const brickHeight = brickWidth;
     const brickMarginTop = -Math.floor(brickHeight / 7);
+    const brickSelect = -Math.floor(brickHeight / 2);
 
     const towerPadding = Math.floor(brickHeight / 4);
-    const towerPaddingTop = Math.floor(brickHeight / 4) - brickMarginTop;
-    const towerMargin = Math.floor(brickHeight / 3);
+    const towerPaddingTop = towerPadding - brickMarginTop;
+    const towerMarginBottom = towerPadding * 4;
+    const towerMargin = towerPadding;
     const towerWidth = brickWidth + towerPadding * 2;
     const towerHeight = (brickHeight + brickMarginTop) * towerLength + towerPadding * 2 - brickMarginTop;
     const towerBorderRadius = Math.floor(towerWidth / 6);
+    const towerSelect = -Math.floor(towerHeight / 10);
 
     const imageWidth = brickWidth;
     const imageHeight = imageWidth;
@@ -56,13 +59,16 @@ function elementsSizes() {
     gameCanvas.style.setProperty('--brick-width', brickWidth + 'px');
     gameCanvas.style.setProperty('--brick-height', brickHeight + 'px');
     gameCanvas.style.setProperty('--brick-margin-top', brickMarginTop + 'px');
+    gameCanvas.style.setProperty('--brick-select', brickSelect + 'px');
     
     gameCanvas.style.setProperty('--tower-padding', towerPadding + 'px');
     gameCanvas.style.setProperty('--tower-padding-top', towerPaddingTop + 'px');
+    gameCanvas.style.setProperty('--tower-margin-bottom', towerMarginBottom + 'px');
     gameCanvas.style.setProperty('--tower-margin', towerMargin + 'px');
     gameCanvas.style.setProperty('--tower-width', towerWidth + 'px');
     gameCanvas.style.setProperty('--tower-height', towerHeight + 'px');
     gameCanvas.style.setProperty('--tower-border-radius', towerBorderRadius + 'px');
+    gameCanvas.style.setProperty('--tower-select', towerSelect + 'px');
     
     gameCanvas.style.setProperty('--image-width', imageWidth + 'px');
     gameCanvas.style.setProperty('--image-height', imageHeight + 'px');
@@ -131,7 +137,8 @@ function moveBricks(towerIndex) {
 
 function earnStars() {
     progress[levelNumber - 1] = 3;
-    saveProgress();
+    
+    Progress.save();
 }
 
 function checkWin() {

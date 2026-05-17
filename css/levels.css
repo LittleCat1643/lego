@@ -16,12 +16,33 @@
 }
 
 .levels > .layout > .level {
+    touch-action: manipulation;
     text-align: center;
     background-size: cover;
+    cursor: pointer;
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black));
     transition: 0.3s;
     margin: 8px 4px;
     width: 64px;
     height: 64px;
+}
+
+.levels > .layout > .level:active {
+    transform: scale(1.05);
+}
+
+.levels > .layout > .closed:active {
+    transform: none;
+}
+
+.levels > .layout > .closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
 }
 
 .levels > .layout > .level > .number {
@@ -36,23 +57,25 @@
     top: 12px;
 }
 
+.levels > .layout > .closed > .number > span {
+    top: 4px;
+}
+
 .levels > .layout > .level > .stars {
     position: relative;
-    top: 12px;
+    background: var(--black);
+    top: 14px;
+}
+
+.levels > .layout > .closed > .stars {
+    display: none;
 }
 
 .levels > .layout > .level > .stars > img {
-    width: 16px;
-}
-
-.levels > .layout > .level:active {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.levels > .layout > .closed:active {
-    cursor: default;
-    transform: none;
+    position: relative;
+    width: 14px;
+    margin: 0 1px;
+    top: 2px;
 }
 
 .levels > .footer {
@@ -86,7 +109,8 @@
             drop-shadow(1px -1px 0 var(--black))
             drop-shadow(-1px 1px 0 var(--black))
             drop-shadow(1px 1px 0 var(--black))
-            drop-shadow(0px 4px 0 var(--black));
+            drop-shadow(0px 2px 0 var(--black))
+            drop-shadow(0px 3px 0 var(--black));
     width: 48px;
 }
 
@@ -96,6 +120,11 @@
                   1px -1px 0 var(--black),
                   -1px 1px 0 var(--black),
                   1px 1px 0 var(--black),
+                  0px 2px 0 var(--black),
+                  0px 3px 0 var(--black),
+                  0px 3px 0 var(--black),
+                  0px 4px 0 var(--black),
+                  0px 5px 0 var(--black),
                   0px 6px 0 var(--black);
     font-weight: 600;
     font-size: 40px;

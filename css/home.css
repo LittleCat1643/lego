@@ -21,13 +21,6 @@
 .home > .header > .logo > img {
     width: 256px;
     filter: drop-shadow(-2px -2px 0 var(--white)) drop-shadow(2px -2px 0 var(--white)) drop-shadow(-2px 2px 0 var(--white)) drop-shadow(2px 2px 0 var(--white));
-    animation: logoAnimation 1s ease infinite;
-}
-
-@keyframes logoAnimation {
-    0% { transform: scale(1.05); }
-    50% { transform: scale(0.95); }
-    100% { transform: scale(1.05); }
 }
 
 .home > .layout > div {
@@ -43,29 +36,39 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border: solid 3px var(--black);
-    outline: solid 3px var(--white);
-    border-radius: 8px;
-    transition: 0.1s;
-    transform: skew(-5deg);
-    padding: 12px;
-    width: 256px;
-    font-size: 24px;
+    background: none;
+    opacity: 0.8;
+    transition: 0.3s;
+    width: 100%;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 
 .home > .layout > div > button:active {
-    transform: skew(-5deg) scale(0.9);
+    opacity: 1;
+    letter-spacing: 5px;
+}
+
+.home > .layout > div > button > b {
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: -1px -1px 0 var(--black),
+                 1px -1px 0 var(--black),
+                 -1px 1px 0 var(--black),
+                 1px 1px 0 var(--black),
+                 0px 2px 0 var(--black),
+                 0px 3px 0 var(--black),
+                 0px 4px 0 var(--black),
+                 0px 5px 0 var(--black);
+    font-weight: 600;
 }
 
 .home > .layout > div > button > img {
-    width: 26px;
-    margin-right: 10px;
-}
-
-.home > .layout > .play > button {
-    background: var(--orange);
-}
-
-.home > .layout > .settings > button {
-    background: var(--pink);
+    width: 40px;
+    margin-right: 16px;
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black))
+            drop-shadow(0px 2px 0 var(--black));
 }

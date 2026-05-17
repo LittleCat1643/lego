@@ -24,7 +24,10 @@ function changeScene(scene) {
     hideScene(currentScene);
     showScene(scene);
 
-    beforeScene = currentScene;
+    if (scene != levelsScene) {
+        beforeScene = currentScene;
+    }
+
     currentScene = scene;
 }
 
@@ -34,6 +37,8 @@ backButtons.forEach(button => {
             changeScene(homeScene);
         } else if (currentScene == levelsScene) {
             changeScene(sectionsScene);
+        } else if (currentScene == gameScene) {
+            changeScene(levelsScene);
         } else {
             changeScene(beforeScene);
         }
