@@ -18,6 +18,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--canvas-width);
     height: var(--canvas-height);
 }
 
@@ -123,4 +128,52 @@
 .game > .canvas > .tower > .brick > .image {
     width: var(--image-width);
     height: var(--image-height);
+}
+
+.game > .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 12px;
+}
+
+.game > .footer > div {
+    position: relative;
+    margin: 12px 24px;
+}
+
+.game > .footer > div > .count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    outline: solid 2px var(--black);
+    background: var(--yellow);
+    width: 24px;
+    height: 24px;
+    top: -12px;
+    right: -12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.game > .footer > div > .button > button {
+    background: none;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.game > .footer > div > .button > button > img {
+    filter: drop-shadow(-1px -1px 0 var(--black))
+            drop-shadow(1px -1px 0 var(--black))
+            drop-shadow(-1px 1px 0 var(--black))
+            drop-shadow(1px 1px 0 var(--black))
+            drop-shadow(0px 2px 0 var(--black))
+            drop-shadow(0px 3px 0 var(--black));
+    width: 40px;
 }

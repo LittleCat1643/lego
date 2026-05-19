@@ -2,7 +2,7 @@ function main() {
     Progress.load();
     Sections.draw();
 
-    changeScene(homeScene);
+    Scenes.change(DOMScenes.home);
 }
 
 document.addEventListener('contextmenu', (event) => {

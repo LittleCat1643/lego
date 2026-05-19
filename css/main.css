@@ -1,6 +1,6 @@
 :root {
     --white: #ffffff;
-    --pink: #fc217d;
+    --red: #f62d2d;
     --yellow: #ffc107;
     --orange: #fdb005;
     --cyan: #5e63b6;
@@ -49,22 +49,23 @@ button {
 .wrap > div {
     display: none;
     max-width: 600px;
+    width: 100vw;
     height: 100%;
 }
 
 .wrap > div > .header {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     width: 100%;
 }
 
-.wrap > div > .header > .back {
+.wrap > div > .header > div {
     z-index: 1;
 }
 
-.wrap > div > .header > .back > button {
+.wrap > div > .header > div > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,11 +77,11 @@ button {
     height: 80px;
 }
 
-.wrap > div > .header > .back > button:active {
+.wrap > div > .header > div > button:active {
     opacity: 1;
 }
 
-.wrap > div > .header > .back > button > img {
+.wrap > div > .header > div > button > img {
     filter: drop-shadow(-1px -1px 0 var(--black))
             drop-shadow(1px -1px 0 var(--black))
             drop-shadow(-1px 1px 0 var(--black))

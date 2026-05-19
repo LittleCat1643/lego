@@ -1,11 +1,11 @@
-.levels {
+.tiers {
     justify-content: center;
     align-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.levels > .layout {
+.tiers > .layout {
     display: flex;
     justify-content: center;
     align-content: flex-start;
@@ -15,7 +15,7 @@
     padding: 16px 0;
 }
 
-.levels > .layout > .level {
+.tiers > .layout > .tier {
     touch-action: manipulation;
     text-align: center;
     background-size: cover;
@@ -30,66 +30,66 @@
     height: 64px;
 }
 
-.levels > .layout > .level:active {
+.tiers > .layout > .tier:active {
     transform: scale(1.05);
 }
 
-.levels > .layout > .closed:active {
+.tiers > .layout > .closed:active {
     transform: none;
 }
 
-.levels > .layout > .closed {
+.tiers > .layout > .closed {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: default;
 }
 
-.levels > .layout > .level > .number {
+.tiers > .layout > .tier > .number {
     font-size: 26px;
     font-weight: 600;
 }
 
-.levels > .layout > .level > .number > span {
+.tiers > .layout > .tier > .number > span {
     position: relative;
     color: var(--white);
     text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black), 0px 3px 0 var(--black), 1px 3px 0 var(--black), -1px 3px 0 var(--black);
     top: 12px;
 }
 
-.levels > .layout > .closed > .number > span {
+.tiers > .layout > .closed > .number > span {
     top: 4px;
 }
 
-.levels > .layout > .level > .stars {
+.tiers > .layout > .tier > .stars {
     position: relative;
     background: var(--black);
     top: 14px;
 }
 
-.levels > .layout > .closed > .stars {
+.tiers > .layout > .closed > .stars {
     display: none;
 }
 
-.levels > .layout > .level > .stars > img {
+.tiers > .layout > .tier > .stars > img {
     position: relative;
     width: 14px;
     margin: 0 1px;
     top: 2px;
 }
 
-.levels > .footer {
+.tiers > .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
 }
 
-.levels > .footer > div {
+.tiers > .footer > div {
     margin: 0 16px;
 }
 
-.levels > .footer > div > button {
+.tiers > .footer > div > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,11 +100,11 @@
     transition: 0.1s;
 }
 
-.levels > .footer > div > button:active {
+.tiers > .footer > div > button:active {
     transform: scale(1.1);
 }
 
-.levels > .footer > div > button > img {
+.tiers > .footer > div > button > img {
     filter: drop-shadow(-1px -1px 0 var(--black))
             drop-shadow(1px -1px 0 var(--black))
             drop-shadow(-1px 1px 0 var(--black))
@@ -114,7 +114,7 @@
     width: 48px;
 }
 
-.levels > .footer > div > span {
+.tiers > .footer > div > span {
     color: var(--white);
     text-shadow: -1px -1px 0 var(--black),
                   1px -1px 0 var(--black),
