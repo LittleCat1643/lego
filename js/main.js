@@ -1,4 +1,5 @@
 function main() {
+    Sounds.load();
     Progress.load();
     Sections.draw();
 
